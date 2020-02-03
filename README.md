@@ -1,4 +1,25 @@
 # Depth-Map-Prediction-from-a-Single-Image-using-a-Multi-Scale-Deep-Network
+## Getting Started
+1.  Create the conda environment:
+    ```shell script
+    conda env create -f environment.yml
+    ```
+    **Note**: This environment has only been tested on Windows 10 and may not work on other operating systems.
+2.  Activate the conda environment:
+    ```shell script
+    conda activate eigen_depth_estimation
+    ```
+
+3.  Download the model weights from https://oregonstate.box.com/s/p3lbkgiwufg9rxfgx53c4svnzz2lz9av and place the file 
+    in the root directory of this repo.
+
+### Generating depth maps
+1.  Run the script `demo.py`:
+    ```shell script
+    python demo.py -i <RGB image file or folder> -o <depth map output file or folder>
+    ```
+    See `python demo.py -h` for more details.
+## Description
 PyTorch implementation from the papers:  
 https://cs.nyu.edu/~deigen/depth/depth_nips14.pdf  
 https://arxiv.org/pdf/1411.4734v4.pdf
